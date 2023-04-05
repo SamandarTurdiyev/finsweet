@@ -1,0 +1,112 @@
+.input{
+    width: 100%;
+    padding: 32px 0 32px 32px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 32px;
+margin-top: 50px;
+outline-style:hidden;
+border: 2px solid gray;
+border-radius: 5px;
+outline: none;
+
+    @include for-line{
+        padding: 24px 0 24px 24px;
+    }
+    @include for-tablet{
+        padding: 18px 0 18px 18px;
+    }
+    @include for-navigation{
+        padding: 14px 0 14px 14px;
+    }
+
+    @include for-mobile{
+        padding: 1px 0 10px 10px;
+    }
+}
+
+.popular__blogs-part{
+    background-color: $body-bg;
+}
+.popularBlogs__cards{
+    
+    padding: 77px 0 99px 0;
+    
+    &-card{
+        display: flex;
+        column-gap: 40px;
+        margin-bottom: 40px;
+
+        @include for-navigation{
+            flex-direction: column;
+            text-align: center;
+            max-width: 405px;
+            padding: 0 24px ;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        &-img{
+
+            @include for-line{
+                width: 250px;
+                object-fit: cover;
+                height: 250px;
+            }
+
+            @include for-navigation{
+            width: 100%;
+            object-fit: cover;
+            }
+        }
+
+        &-about{
+
+            padding: 0 24px;
+            &-workAbout{
+                font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+transition: 0.5s ease;
+color: #592EA9;
+padding-bottom: 24px;
+                @include for-navigation{
+                    padding-top: 24px;
+                }
+               
+            }
+            &-title{
+                font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    transition: 0.5s ease;
+    padding-bottom: 44px;
+    color: #232536;
+
+    @include for-line{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        padding-bottom: 32px;
+    }
+            }
+            &-text{
+                font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+transition: 0.5s ;
+color: #6D6E76;
+            }
+        }
+       
+    }
+
+}

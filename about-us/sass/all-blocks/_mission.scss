@@ -1,0 +1,70 @@
+.mission{
+    background-color: $body-bgcolor;
+}
+.mission-part{
+    display: flex;
+    background: #f2bdedcf;
+    padding: 80px ;
+
+    @include for-line{
+        padding: 80px 20px;
+    }
+    @include for-tablet{
+        flex-direction: column;
+        padding: 100px 40px;
+    }
+    @include for-mobile{
+        padding: 100px 24px;
+    }
+}
+.mission-part-card{
+    padding: 0 40px;
+    background-color: #fff;
+    margin: 0 12px;
+    transition: 0.5s ease;
+    max-height: 400px;
+    overflow-y: scroll;
+
+    @include for-tablet{
+        margin: 12px 0;
+    }
+&-dev{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+transition: 0.5s ease;
+color: #232536;
+padding-bottom: 24px;
+padding-top: 32px;
+
+}
+    &-title{
+        font-family: 'Sen';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 40px;
+transition: 0.5s ease;
+color: #232536;
+padding-bottom: 16px;
+        @include for-line{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    &-text{
+        font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+transition: 0.5s ease;
+color: #6D6E76;
+    }
+}
+.mission-part-card:hover{
+    transform: translateY(-15px);
+}
