@@ -1,0 +1,35 @@
+.footer{
+    background: $bg-color;
+    min-height: 100px;
+    width: 100%;
+}
+.footer__menu{
+    @include flex;
+    padding-top: 25px;
+
+    @include for-mobile{
+        flex-direction: column;
+        text-align: center;
+        row-gap: 24px ;
+    }
+}
+.footer__lefthart{
+    &-text{
+        font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+color: #FFFFFF;
+transition: 0.5s ease;
+opacity: 0.7;
+    }
+}
+.footer__righthart{
+    display: flex;
+    column-gap: 24px;
+    padding-bottom: 25px;
+    &-img{
+        border-radius: 4px;
+    }
+}
