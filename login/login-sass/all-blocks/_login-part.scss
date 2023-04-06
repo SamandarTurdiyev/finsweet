@@ -1,0 +1,46 @@
+.login{
+    background-color: $body-bgcolor;
+
+    &-part{
+        max-width: 700px;
+        // height: 100vh;
+        margin: 0 auto;
+        padding: 150px 24px;
+
+        &-title{
+            font-family: 'Sen';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 64px;
+text-align: center;
+color: #232536;
+padding-bottom: 50px;
+        }
+
+        &-input{
+            font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+width: 100%;
+padding: 15px 15px;
+margin-top: 24px ;
+        }
+        &-btn{
+            font-family: 'Sen';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+color: #232536;
+width: 100%;
+padding: 15px 0;
+background: #FFD050;
+border: 2px solid transparent;
+margin-top: 75px;
+
+        }
+    }
+}

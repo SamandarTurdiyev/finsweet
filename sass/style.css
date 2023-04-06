@@ -495,9 +495,6 @@
   border-radius: 14px;
   transition: 0.5s;
 }
-.catagory__cards-card-img:nth-child(2) {
-  margin-bottom: 24px;
-}
 .catagory__cards-card-title {
   font-family: "Sen";
   font-style: normal;

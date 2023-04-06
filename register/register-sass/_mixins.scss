@@ -1,0 +1,39 @@
+@mixin flex(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+@mixin flexY(){
+    display: flex;
+    align-items: center;
+}
+@mixin flexX(){
+    display: flex;
+   justify-content: space-between;
+}
+
+@mixin for-line{
+    @media  (max-width: 992px) {
+            @content;
+        }
+    }
+
+@mixin for-tablet {
+    @media ( max-width: 768px){
+       @content;
+    }
+}
+
+@mixin for-mobile {
+   @media (max-width: 567px) {
+       @content;
+   }
+}
+@mixin for-navigation {
+    @media (max-width: 722px) {
+        @content;
+    }
+ }
+
+
