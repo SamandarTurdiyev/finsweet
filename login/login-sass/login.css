@@ -214,6 +214,7 @@
   width: 100%;
   padding: 15px 15px;
   margin-top: 24px;
+  outline: none;
 }
 .login-part-btn {
   font-family: "Sen";

@@ -3,7 +3,7 @@
 
     &-part{
         max-width: 700px;
-        // height: 100vh;
+        height: calc('100vh - 100px');
         margin: 0 auto;
         padding: 150px 24px;
 
@@ -16,6 +16,7 @@ line-height: 64px;
 text-align: center;
 color: #232536;
 padding-bottom: 50px;
+
         }
 
         &-input{
@@ -27,6 +28,7 @@ line-height: 28px;
 width: 100%;
 padding: 15px 15px;
 margin-top: 24px ;
+outline: none;
         }
         &-btn{
             font-family: 'Sen';
