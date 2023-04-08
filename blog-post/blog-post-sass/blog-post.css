@@ -18,9 +18,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .container {
@@ -51,7 +51,7 @@
     position: absolute;
     row-gap: 24px;
     width: 100%;
-    height: 70px;
+    height: 150px;
     background: rgba(3, 20, 45, 0.7803921569);
     top: 50px;
     top: -200%;
@@ -67,12 +67,11 @@
     flex-direction: column;
     width: 100%;
     align-items: flex-start;
-    height: 150px;
   }
 }
 @media (max-width: 567px) {
   .menu {
-    min-height: 400px;
+    min-height: 720px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -111,8 +110,8 @@
 }
 
 .menu.active {
-  top: 49px;
-  right: 0px;
+  top: 50px;
+  right: 1px;
 }
 
 .menu__bar {
@@ -125,7 +124,7 @@
 @media (max-width: 768px) {
   .menu__bar {
     align-items: flex-start;
-    row-gap: 18px;
+    row-gap: 24px;
   }
 }
 @media (max-width: 567px) {
@@ -188,172 +187,126 @@
   transform: translateY(-12px) rotate(-45deg);
 }
 
-.mission {
-  background-color: #E5E5E5;
+.hearor {
+  background-image: url("../images/hearor_bg.jpg");
+  width: 100%;
+  height: 720px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.mission-part {
+.hearor__hart {
   display: flex;
-  background: rgba(242, 189, 237, 0.8117647059);
-  padding: 80px;
+  align-items: center;
+  min-height: 720px;
 }
-@media (max-width: 992px) {
-  .mission-part {
-    padding: 80px 20px;
+@media (max-width: 567px) {
+  .hearor__hart {
+    text-align: center;
+    padding: 0 24px;
   }
 }
+
+.hero__posted {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  transition: 0.5s ease;
+  padding-bottom: 24px;
+}
+@media (max-width: 722px) {
+  .hero__posted {
+    padding-top: 24px;
+  }
+}
+.hero__posted-two {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.hero__title {
+  font-family: "Sen";
+  max-width: 883px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 64px;
+  color: #FFFFFF;
+  transition: 0.5s ease;
+  padding-bottom: 24px;
+}
 @media (max-width: 768px) {
-  .mission-part {
-    flex-direction: column;
-    padding: 100px 40px;
+  .hero__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
   }
 }
 @media (max-width: 567px) {
-  .mission-part {
-    padding: 100px 24px;
-  }
-}
-
-.mission-part-card {
-  padding: 0 40px;
-  background-color: #fff;
-  margin: 0 12px;
-  transition: 0.5s ease;
-}
-@media (max-width: 768px) {
-  .mission-part-card {
-    margin: 12px 0;
-  }
-}
-.mission-part-card-dev {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  transition: 0.5s ease;
-  color: #232536;
-  padding-bottom: 24px;
-  padding-top: 32px;
-}
-.mission-part-card-title {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 40px;
-  transition: 0.5s ease;
-  color: #232536;
-  padding-bottom: 16px;
-}
-@media (max-width: 992px) {
-  .mission-part-card-title {
+  .hero__title {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 44px;
+    line-height: 51px;
   }
 }
-.mission-part-card-text {
+.hero__byName {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
+  color: #FFFFFF;
   transition: 0.5s ease;
-  color: #6D6E76;
-}
-
-.mission-part-card:hover {
-  transform: translateY(-15px);
-}
-
-.creativBlog {
-  display: flex;
-  align-items: center;
-  padding: 70px 0;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .creativBlog {
-    flex-direction: column;
-    row-gap: 24px;
-    text-align: center;
-    padding: 70px 24px;
-  }
-}
-.creativBlog-img {
-  max-width: 519px;
-  transition: 0.5s;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 992px) {
-  .creativBlog-img {
-    max-width: 350px;
-  }
-}
-.creativBlog-img:hover {
-  transform: rotate(5deg);
-}
-.creativBlog__about {
-  max-width: 519px;
-}
-@media (max-width: 992px) {
-  .creativBlog__about {
-    max-width: 450px;
-  }
-}
-.creativBlog__about-title {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  color: #232536;
-  transition: 0.5s;
   padding-bottom: 16px;
 }
-@media (max-width: 992px) {
-  .creativBlog__about-title {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
-  }
+.hero__byName-two {
+  color: rgb(245, 170, 7);
 }
-.creativBlog__about-text {
-  font-family: "Sen";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  transition: 0.5s;
-  color: #232536;
-  padding-bottom: 16px;
-}
-@media (max-width: 992px) {
-  .creativBlog__about-text {
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 27px;
-  }
-}
-.creativBlog__about-texts {
+.hero__text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  transition: 0.5s;
-  color: #232536;
+  color: #FFFFFF;
+  transition: 0.5s ease;
+  max-width: 599px;
+  padding-bottom: 44px;
 }
-@media (max-width: 992px) {
-  .creativBlog__about-texts {
-    font-weight: 400;
+@media (max-width: 768px) {
+  .hero__text {
     font-size: 14px;
     line-height: 24px;
   }
+}
+.hero__btn {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #232536;
+  background: #FFD050;
+  transition: 0.5s ease;
+  padding: 16px 48px;
+  border: 2px solid transparent;
+}
+.hero__btn:hover {
+  background: transparent;
+  color: #FFD050;
+  border: 2px solid #FFD050;
+}
+.hero__btn:focus {
+  background: transparent;
+  color: #f41000;
+  border: 2px solid #fa0303;
 }
 
 .footer {
@@ -395,4 +348,4 @@
 }
 .footer__righthart-img {
   border-radius: 4px;
-}/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=blog-post.css.map */
