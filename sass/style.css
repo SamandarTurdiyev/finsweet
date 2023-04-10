@@ -324,7 +324,6 @@
 
 .popular__cards {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   -moz-column-gap: 24px;
        column-gap: 24px;
@@ -387,26 +386,23 @@
   }
 }
 
-.card__about-byName {
+.card__about-byName-two {
+  color: #f305f7;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #4C4C4C;
   padding-top: 32px;
   transition: 0.5s ease;
 }
-.card__about-byName-two {
-  color: #f305f7;
-}
 @media (max-width: 992px) {
-  .card__about-byName {
+  .card__about {
     padding-top: 1px;
   }
 }
 @media (max-width: 768px) {
-  .card__about-byName {
+  .card__about {
     padding-top: 32px;
   }
 }
