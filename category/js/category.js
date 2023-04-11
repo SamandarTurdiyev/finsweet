@@ -15,21 +15,37 @@ hamburger.addEventListener('click' , () =>{
 
 
 
-let url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=b2fe8d6d6652440ba40b99b80eb6087d`
+let url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=0d63c89bb8594cb3baabddcc4e1caa76`;
 
 const fragmentss = document.createDocumentFragment();
 const popularCards = document.querySelector('.popularBlogs__cards');
-// const pagiantioWrapper =  document.querySelector('.pagination-wrapper');
+const pagiantioWrapper =  document.querySelector('.pagination-wrapper');
+const searchInput = document.getElementById('input');
+let currentPage =1;
 
 async function blogDate() {
+
+    let search = searchInput.value;
+    if (search) {
+        url = `https://newsapi.org/v2/everything?q=${search}&apiKey=b2fe8d6d6652440ba40b99b80eb6087d`
+        
+    }else{
+        url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=0d63c89bb8594cb3baabddcc4e1caa76&page=${currentPage}`
+    }
+
+
+
+
     try {
+        popularCards.innerHTML=''
+
+
         const response = await fetch(url);
         let data = await response.json();
-        console.log(data);
-
-        // let totalPages = data.totalResults > 5 ? 10 : data.totalResults;
-
-        data.articles.slice(0,3).map((samsung) => {
+        // console.log(data);
+        let totalPages = data.totalResults > 5 ? 5 : data.totalResults
+        console.log(totalPages);
+        data.articles.slice(0,4).map((samsung) => {
                     const {title, author, urlToImage, content, } = samsung;
 
                     const popularCardsCard = document.createElement('div');
@@ -84,24 +100,26 @@ async function blogDate() {
                 //         </div>
                 //     </div>
                
-                // pagiantioWrapper.innerHTML = '';
-                // if (totalPages > 1) {
-                //     for (let i = 1; i <= totalResults; i++) {
-                //        const button = document.createElement('button')
-                //         button.innerText = i;
+                pagiantioWrapper.innerHTML = '';
+                if (totalPages > 1) {
+                    for (let i = 1; i <= totalPages; i++) {
+                       const pagenationNum = document.createElement('button')
+                        pagenationNum.innerText = i;
+                       
+                        console.log('ok');
         
-                //         if (currentPage === i) {
-                //             button.classList.add('active');
+                        if (currentPage === i) {
+                            pagenationNum.classList.add('pagination');
         
-                //         }
-                //         button.addEventListener('click', () =>{
-                //             currentPage = i;
-                //             blogData();
-                //         })
+                        }
+                        pagenationNum.addEventListener('click', () =>{
+                            currentPage = i;
+                            blogDate();
+                        })
         
-                //         pagiantioWrapper.appendChild(button)
-                //     }
-                // }
+                        pagiantioWrapper.appendChild(pagenationNum)
+                    }
+                }
 
     } catch (error) {
         console.error(error)
@@ -109,3 +127,10 @@ async function blogDate() {
 }
 
 blogDate();
+
+
+searchInput.addEventListener('keypress', (event) => {
+    if ( event.key === 'Enter') {
+     blogDate()
+    }
+ }, 5000 )
