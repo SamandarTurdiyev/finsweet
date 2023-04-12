@@ -255,6 +255,11 @@
   transition: 0.5s;
 }
 
+.text {
+  color: #de1607;
+  padding-top: 7px;
+}
+
 .footer {
   background: #232536;
   min-height: 100px;
