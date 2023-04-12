@@ -45,81 +45,89 @@ async function blogDate() {
         // console.log(data);
         let totalPages = data.totalResults > 5 ? 5 : data.totalResults
         console.log(totalPages);
-        data.articles.slice(0,4).map((samsung) => {
-                    const {title, author, urlToImage, content, } = samsung;
 
-                    const popularCardsCard = document.createElement('div');
-                    popularCardsCard.classList.add('popularBlogs__cards-card');
-            
-                    const img = document.createElement('img');
-                    img.classList.add('popularBlogs__cards-card-img');
-                    img.src = urlToImage;
-                    img.alt = title;
-            
-                    
+        if (data.articles.length === 0) {
+            const notFound = document.createElement('div');
+            notFound.textContent= 'hech qanday malumot yoq';
+            popularCards.appendChild(notFound)
+        }else{
+            data.articles.slice(0,4).map((samsung) => {
+                const {title, author, urlToImage, content, } = samsung;
 
-                    const cardAbout = document.createElement('div');
-                    cardAbout.classList.add('popularblogs__cards-card-about');
-            
-                    const cardAuthor = document.createElement('h4');
-                    cardAuthor.classList.add('popularBlogs__cards-card-about-workAbout');
-                    cardAuthor.textContent = author;
-            
-                    const cardTitle = document.createElement('h3');
-                    cardTitle.classList.add('popularBlogs__cards-card-about-title');
-                    cardTitle.textContent = title;
-            
-                    const cardText = document.createElement('p');
-                    cardText.classList.add('popularBlogs__cards-card-about-text')
-                    cardText.textContent = content;
-            
-                  
-            
-                    fragmentss.appendChild(cardAuthor);
-                    fragmentss.appendChild(cardTitle);
-                    fragmentss.appendChild(cardText);
-            
-            
-                    cardAbout.appendChild(fragmentss);
-            
-                    popularCardsCard.appendChild(img);
-
-                    popularCardsCard.appendChild(cardAbout);
-            
-                    popularCards.appendChild(popularCardsCard)
-            
-            
-                })
-
-                // <div class="popularBlogs__cards-card">
-                //         <img class="popularBlogs__cards-card-img" src="../images/women.jpg" alt="BusinesWomen">
-                //         <div class="popularblogs__cards-card-about">
-                //             <h4 class="popularBlogs__cards-card-about-workAbout">Business</h4>
-                //             <h3 class="popularBlogs__cards-card-about-title">Top 6 free website mockup tools 2022</h3>
-                //             <p class="popularBlogs__cards-card-about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.</p>
-                //         </div>
-                //     </div>
-               
-                pagiantioWrapper.innerHTML = '';
-                if (totalPages > 1) {
-                    for (let i = 1; i <= totalPages; i++) {
-                       const pagenationNum = document.createElement('button')
-                        pagenationNum.innerText = i;
-                       
-                        console.log('ok');
+                const popularCardsCard = document.createElement('div');
+                popularCardsCard.classList.add('popularBlogs__cards-card');
         
-                        if (currentPage === i) {
-                            pagenationNum.classList.add('pagination');
+                const img = document.createElement('img');
+                img.classList.add('popularBlogs__cards-card-img');
+                img.src = urlToImage;
+                img.alt = title;
         
-                        }
-                        pagenationNum.addEventListener('click', () =>{
-                            currentPage = i;
-                            blogDate();
-                        })
+                
+
+                const cardAbout = document.createElement('div');
+                cardAbout.classList.add('popularblogs__cards-card-about');
         
-                        pagiantioWrapper.appendChild(pagenationNum)
+                const cardAuthor = document.createElement('h4');
+                cardAuthor.classList.add('popularBlogs__cards-card-about-workAbout');
+                cardAuthor.textContent = author;
+        
+                const cardTitle = document.createElement('h3');
+                cardTitle.classList.add('popularBlogs__cards-card-about-title');
+                cardTitle.textContent = title;
+        
+                const cardText = document.createElement('p');
+                cardText.classList.add('popularBlogs__cards-card-about-text')
+                cardText.textContent = content;
+        
+              
+        
+                fragmentss.appendChild(cardAuthor);
+                fragmentss.appendChild(cardTitle);
+                fragmentss.appendChild(cardText);
+        
+        
+                cardAbout.appendChild(fragmentss);
+        
+                popularCardsCard.appendChild(img);
+
+                popularCardsCard.appendChild(cardAbout);
+        
+                popularCards.appendChild(popularCardsCard)
+        
+        
+            })
+
+            // <div class="popularBlogs__cards-card">
+            //         <img class="popularBlogs__cards-card-img" src="../images/women.jpg" alt="BusinesWomen">
+            //         <div class="popularblogs__cards-card-about">
+            //             <h4 class="popularBlogs__cards-card-about-workAbout">Business</h4>
+            //             <h3 class="popularBlogs__cards-card-about-title">Top 6 free website mockup tools 2022</h3>
+            //             <p class="popularBlogs__cards-card-about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec.</p>
+            //         </div>
+            //     </div>
+           
+            pagiantioWrapper.innerHTML = '';
+            if (totalPages > 1) {
+                for (let i = 1; i <= totalPages; i++) {
+                   const pagenationNum = document.createElement('button');
+                   pagenationNum.classList.add('pagee')
+                    pagenationNum.innerText = i;
+                    console.log('ok');
+    
+                    if (currentPage === i) {
+                        pagenationNum.classList.add('pagination');
+    
                     }
+                    pagenationNum.addEventListener('click', () =>{
+                        currentPage = i;
+                        blogDate();
+                    })
+    
+                    pagiantioWrapper.appendChild(pagenationNum)
                 }
+            }
+        }
+       
 
     } catch (error) {
         console.error(error)

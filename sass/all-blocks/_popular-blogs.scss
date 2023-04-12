@@ -9,6 +9,9 @@
     line-height: 48px;
     color: #000000;
     padding: 94px 0 64px 0; 
+    @include for-tablet{
+        text-align: center
+    }
     }
 }
 

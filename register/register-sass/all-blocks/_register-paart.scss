@@ -41,7 +41,34 @@ padding: 15px 0;
 background: #FFD050;
 border: 2px solid transparent;
 margin-top: 75px;
+transition: 0.5s;
 
         }
+        &-btn:hover{
+background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.61%);
+border-radius: 22px;
+color: #de1607;
+border: 2px solid red;
+
+        }
+        &-btn:focus{
+            background:linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%);
+            border-radius: 22px;
+
+                     color:rgba(0, 255, 0, 0.979) ;
+            border: 2px solid rgb(98, 255, 0);
+            
+                    }
     }
+}
+
+.notActive{
+    border: 2px solid red;
+    border-radius: 22px;
+    transition: 0.5s ;
+}
+.Active{
+    border: 2px solid green;
+    border-radius: 22px;
+    transition: 0.5s;
 }
