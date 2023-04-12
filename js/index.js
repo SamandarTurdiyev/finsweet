@@ -12,7 +12,7 @@ hamburger.addEventListener('click' , () =>{
 
 
 
-let url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=196552f935fd418792c1868ec1388170`
+let url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=75a7c5a9a671455d8a97b8b607246ea4`
 
 const fragments = document.createDocumentFragment();
 const popularCards = document.querySelector('.popular__cards');
@@ -22,7 +22,7 @@ async function blogData() {
     try {
         const response = await fetch(url);
         let data = await response.json();
-        console.log(data);
+        
 
         // let totalPages = data.totalResults > 5 ? 10 : data.totalResults;
 

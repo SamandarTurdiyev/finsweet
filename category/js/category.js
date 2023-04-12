@@ -15,7 +15,7 @@ hamburger.addEventListener('click' , () =>{
 
 
 
-let url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=0d63c89bb8594cb3baabddcc4e1caa76`;
+let url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=75a7c5a9a671455d8a97b8b607246ea4`;
 
 const fragmentss = document.createDocumentFragment();
 const popularCards = document.querySelector('.popularBlogs__cards');
@@ -27,10 +27,10 @@ async function blogDate() {
 
     let search = searchInput.value;
     if (search) {
-        url = `https://newsapi.org/v2/everything?q=${search}&apiKey=b2fe8d6d6652440ba40b99b80eb6087d`
+        url = `https://newsapi.org/v2/everything?q=${search}&apiKey=75a7c5a9a671455d8a97b8b607246ea4`
         
     }else{
-        url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=0d63c89bb8594cb3baabddcc4e1caa76&page=${currentPage}`
+        url = `https://newsapi.org/v2/everything?q=Samsung&apiKey=75a7c5a9a671455d8a97b8b607246ea4&page=${currentPage}`
     }
 
 
@@ -40,17 +40,19 @@ async function blogDate() {
         popularCards.innerHTML=''
 
 
-        const response = await fetch(url);
+        const response = await fetch(url)
         let data = await response.json();
-        // console.log(data);
+        console.log(data);
         let totalPages = data.totalResults > 5 ? 5 : data.totalResults
-        console.log(totalPages);
+        
 
         if (data.articles.length === 0) {
+            console.log(2);
             const notFound = document.createElement('div');
             notFound.textContent= 'hech qanday malumot yoq';
             popularCards.appendChild(notFound)
         }else{
+
             data.articles.slice(0,4).map((samsung) => {
                 const {title, author, urlToImage, content, } = samsung;
 
@@ -96,6 +98,8 @@ async function blogDate() {
         
         
             })
+        }
+            
 
             // <div class="popularBlogs__cards-card">
             //         <img class="popularBlogs__cards-card-img" src="../images/women.jpg" alt="BusinesWomen">
@@ -126,7 +130,7 @@ async function blogDate() {
                     pagiantioWrapper.appendChild(pagenationNum)
                 }
             }
-        }
+        
        
 
     } catch (error) {
