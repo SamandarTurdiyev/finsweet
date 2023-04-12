@@ -297,6 +297,7 @@
   transition: 0.5s ease;
   padding: 16px 48px;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 .hero__btn:hover {
   background: transparent;
@@ -320,6 +321,11 @@
   line-height: 48px;
   color: #000000;
   padding: 94px 0 64px 0;
+}
+@media (max-width: 768px) {
+  .popular__blogs-title {
+    text-align: center;
+  }
 }
 
 .popular__cards {
@@ -507,6 +513,10 @@
   font-size: 16px;
   line-height: 28px;
   color: #6D6E76;
+}
+.catagory__cards-card:hover {
+  background: rgba(255, 209, 60, 0.711);
+  cursor: pointer;
 }
 
 .footer {

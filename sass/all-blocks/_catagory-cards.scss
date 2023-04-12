@@ -72,6 +72,10 @@ line-height: 28px;
 color: #6D6E76;
         }
     }
+    &-card:hover{
+        background: rgba(255, 209, 60, 0.711);
+        cursor: pointer;
+    }
     
 }
 // .catagory__cards-card:hover{
