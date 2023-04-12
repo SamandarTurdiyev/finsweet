@@ -61,6 +61,7 @@ form.addEventListener('submit', (e) =>{
     if (!input[3].value && !input[4].value) {
         input[3].classList.add('notActive');
         input[4].classList.add('notActive');
+        
         message[3].textContent = 'please enter a password'
         message[4].textContent = 'please enter a password'
     } else if (input[3].value === input[4].value) {
@@ -70,13 +71,16 @@ form.addEventListener('submit', (e) =>{
         input[4].classList.add('Active');
         message[3].textContent = ''
         message[4].textContent = ''
-        
-    } else {
+    }
+    
+     else {
+        input[3].classList.remove('Active');
+        input[4].classList.remove('Active');
         
         input[3].classList.add('notActive');
         input[4].classList.add('notActive');
         message[3].textContent = 'There is an error in the password, please try again'
         message[4].textContent = 'There is an error in the password, please try again'
     }
-    // form.reset();
+    
 })

@@ -309,6 +309,112 @@
   border: 2px solid #fa0303;
 }
 
+.blogPost-about-me {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.blogPost-about-me-img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  padding-top: 12px;
+}
+
+.blogpost-about-me-myName {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: #592EA9;
+  transition: 0.5s;
+  max-width: 300px;
+}
+
+.blogPost-about-me-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  max-width: 350px;
+  /* identical to box height, or 175% */
+  /* Medium grey */
+  color: #6D6E76;
+}
+
+.blogPost-about {
+  max-width: 843px;
+  margin: 0 auto;
+}
+.blogPost-about-title {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #232536;
+  transition: 0.5s;
+  max-width: 743px;
+  padding: 24px 12px 34px 12px;
+}
+.blogPost-about-text {
+  font-family: "Sen";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  transition: 0.5s;
+  color: #232536;
+  padding: 0 12px 62px 12px;
+  max-width: 743px;
+}
+.blogPost-about-texts {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 24px 12px;
+  color: #6D6E76;
+  max-width: 743px;
+}
+
+.blogPost__part {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.blogPost__part-title {
+  text-align: center;
+  padding-bottom: 22px;
+}
+.blogPost__part-input {
+  width: 100%;
+  padding: 8px 12px 8px 1px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  margin-bottom: 12px;
+}
+.blogPost__part-btn {
+  padding: 12px 34px;
+  text-align: end;
+}
+
+.postImg {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .footer {
   background: #232536;
   min-height: 100px;
